@@ -17,10 +17,11 @@ export function Question({
   className,
 }: QuestionProps) {
   function handleAlternativeSelection(event: ChangeEvent<HTMLInputElement>) {
-    if (event.target.checked && onChange) {
-      onChange(question.id);
+    if (onChange) {
+      onChange(event.target.value);
     }
   }
+
   return (
     <div className={clsx(className)}>
       <div>{question.text}</div>
@@ -29,7 +30,7 @@ export function Question({
           <div key={alternative.id}>
             <input
               type="radio"
-              name={name}
+              name={name}  
               value={alternative.id}
               id={alternative.id}
               checked={value === alternative.id}

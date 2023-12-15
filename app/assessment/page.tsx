@@ -1,4 +1,3 @@
-"use client"; // agora vai!
 import Link from "next/link";
 import { UserAssessment } from "./UserAssessment";
 

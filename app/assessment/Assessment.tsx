@@ -19,8 +19,9 @@ export function Assessment({ assessment, className }: AssessmentProps) {
             key={question.id}
             control={control}
             name={`answers.${index}`}
-            render={({ field }) => <Question {...field} question={question} />}
-          />
+            render={({ field: { ref, ...field } }) => (
+              <Question {...field} question={question} />
+            )}          />
         );
       })}
     </div>
