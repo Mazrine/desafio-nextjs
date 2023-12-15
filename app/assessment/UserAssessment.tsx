@@ -1,3 +1,5 @@
+"use client"; // agora vai!
+
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
